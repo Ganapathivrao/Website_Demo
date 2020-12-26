@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container text-justify">
+<br>
+<h3><center>SEND ESSAY </center></h3>
+
+<div>
+			<p style="font-size: 20px; color: blue; font-style: italic;">
+				Dear <b> {{session.s_name}} </b>,<br> 
+				<h5><i>Recommended format you can follow while sending an essay:</i></h5><br>				
+				<i class="fas fa-check"></i> Please make sure the contact details you have provided are correct.<br>
+			
+				<i class="fas fa-check"></i> Make sure to use: Fonts: 18px, Times New Roman, Text Align: justify<br>
+				<i class="fas fa-check"></i> Keep checking your inbox. The respective editor may contact you for queries. Use the <b>Chatroom</b> to interact with our editor.<br>
+			</p>
+
+
+</div>
+<br>
+<h4><center><u>SEND YOUR ESSAYS NOW</u></center></h4>
+<center><i class="fas fa-arrow-down"></i></center>
+
+<div class="container">
+{% from "includes/_formhelpers.html" import render_field %}
+<form method="POST"  action="">
+	<div class="form-group">
+		{{ render_field(form.title, class_="form-control") }}
+	</div>
+	<div class="form-group">
+		{{ render_field(form.body, class_='form-control', id="editor") }}
+	</div>
+
+	<p><input class="btn btn-primary btn-block" type="submit"  value="SEND"></p><br>
+	</form>
+	</div>
+
+{% if session.logged_in == NULL %}
+
+			<div class="container text-center"> 
+			{% else %}
+					<p class="lead">I received your essay for editing. I may send you messages and ask for queries here. Please keep checking your inbox.<br> </p>
+					<center><a href="/chatting/{{ session.uid }}" class="btn btn-primary btn-lg"><i class="fas fa-user-md-chat"></i> TO CHATROOM</a></center>
+					<br>
+				{% endif %}
+			</div>
+
+	{% endblock %}
+</div>

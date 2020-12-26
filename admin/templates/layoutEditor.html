@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FlaskApp</title>
+    
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="css/background.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!--This syntax is used to give us the ability to extend the contents of this page. -->
+{% include 'includes/_navbarEditor.html' %}
+<div class="container-fluid">
+{% include 'includes/_messages.html' %} 
+{% block body %} {% endblock %}
+</div>
+
+<div>
+<script src="//cdn.ckeditor.com/4.11.2/full/ckeditor.js"></script>
+
+<script type="text/javascript">
+    
+CKEDITOR.replace('editor')
+
+</script>
+
+</div>
+
+   <!-- 
+<div class="container-fluid text-center bg-grey ">
+  <h2>CONTACT</h2>
+    <div id="contact" class="container-fluid bg-grey">
+      
+        <div class="row col-sm-12 col-md-6 col-lg-6  slideanim" style="display: inline-grid; float: left;">
+            <div style="display: inline-grid; width: 100%; text-align: left;">
+                <p><b><i>Contact us and we'll get back to you within 24 hours.</b></i></p>
+                <p> <img src="https://img.icons8.com/color/48/000000/address.png">Mysore, Karnataka, India</p>
+                <p><img src="https://img.icons8.com/color/48/000000/phone.png"> +91 9148045348</p>
+                <p><img src="https://img.icons8.com/color/48/000000/email.png"> essayedit@outlook.com</p>
+            </div>
+             <h6 style="text-align: left;"><i>Leave you feedback or questions here</i></h6>
+            <div style="width: 100%;">
+                <div class="col-sm-6 form-group">
+                  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                  <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                </div>
+           
+              <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+              <div class="row">
+                <div class="col-sm-12 form-group">
+                  <button class="btn btn-primary pull-right" type="submit">Send</button>
+                </div>
+              </div>
+            </div>                
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 slideanim" style=" height: 500px; display: inline-grid;">
+            <h2>STAY IN TOUCH</h2>
+            <center>
+               <a href="https://www.facebook.com/"> <img src="https://img.icons8.com/color/48/000000/facebook.png"></a>
+            </center>
+            <center>
+                <a href="https://www.instagram.com"><img src="https://img.icons8.com/color/48/000000/instagram-new.png"></a>
+            </center>
+            <center>
+                <a href="https://twitter.com"><img src="https://img.icons8.com/color/48/000000/twitter.png"></a>
+            </center>
+            <center>
+                <a href="https://www.youtube.com/"><img src="https://img.icons8.com/color/48/000000/youtube-play.png"></a>
+            </center>
+
+
+        </div>
+    </div>
+</div>
+ 
+          <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-black">
+                    <p class="h6">All rights Reversed. Website by Reza</p>
+                </div> -->
+           
+</body>
+</html>

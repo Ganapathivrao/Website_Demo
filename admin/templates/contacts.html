@@ -1,0 +1,41 @@
+<!-- Container (Contact Section) -->
+{% extends 'layout.html' %}
+{%  block body %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contacts</title>
+</head>
+<body>
+  <br><br>
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-6">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><img src="https://img.icons8.com/color/48/000000/address.png"/> MYSORE, KARNATAKA, INDIA</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91 9148045348</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> rezatayeb2016@gmail.com</p>
+    </div>
+    <br>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+{% endblock %}

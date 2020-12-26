@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top ">
+
+  <a class="navbar-brand text-white" href="/home"><h5>HELP</h5></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-white" href="/home"><b>HOME</b><span class="sr-only">(current)</span></a>
+      </li>
+      
+
+        {% if session.logged_in %}
+      <li class="nav-item active" style="position: absolute; right: 10px;">
+        <a class="nav-link" href="/logout"  style="color: red; "><i class="fas fa-sign-out-alt"></i> <b>LOGOUT</b></a>
+      </li>
+
+       <li class="nav-item active" style="position: absolute; right: 80%;">
+        <a class="nav-link" href="/dashboard"  style="color: white; "><b>DASHBOARD</b></a>
+      </li>
+
+  {% else %}
+  <!--
+  <div class="container">
+  <button type="button" class="btn btn-primary btn-sm"><a class=" mr-sm-2 text-white" href="/register">
+          <i class="fas fa-user-plus mr-1"></i>
+          <b>Sign up as new admin</b>
+       </a></button>
+
+    <button type="button" class="btn btn-primary btn-sm"><a class=" my-2 my-sm-0 text-white" href="/login">
+          <i class="fas fa-sign-in-alt mr-1"></i>
+          <b> Already admin</b>
+         </a></button>
+</div>
+-->
+        {% endif %}
+    
+  </div>
+</nav>
+

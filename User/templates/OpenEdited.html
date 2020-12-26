@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block body  %}
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+	@media (min-width: 320px) and (max-width: 480px)
+	{
+       .box
+       {
+       	 width: 90% !important;
+       }
+	}
+</style>
+</head>
+
+
+<br><br>
+<h1 style="text-align: center; ">{{articles.title}}</h1>
+
+
+
+
+<div class="container-fluid text-justify box" style="width:60%; line-height: 35px; min-height: 400px;" >
+
+<hr>	
+
+{{articles.body | safe }}
+
+<hr>
+</div>
+
+{% endblock %}

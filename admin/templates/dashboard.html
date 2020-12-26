@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+	
+	{% block body %}
+	<body class="container text-justify" >
+	<br><br>
+	<h1><center>ADMIN DASHBOARD</center></h1>
+			<div>
+				<p style="font-size: 20px; color: blue; font-style: italic;">
+				Dear <b> {{session.s_name}} </b>,<br> 
+				<h5>Steps to be followed: </h5><br>
+				<i class="fas fa-check"></i> Please make sure the contact details you have provided are correct.<br>
+				<i class="fas fa-check"></i> You can publish your answers here using <b>ADD ANSWERS </b>.<br>
+
+				<i class="fas fa-check"></i>  Make sure to insert appropriate data inside your essay body.<br>
+
+				<i class="fas fa-check"></i> Please keep checking your inbox through <b>Chatroom</b>. In case the editor requires queries, you may interact through that too.</br>
+				<i class="fas fa-check"></i> You may delete your essays using <b>Delete</b> option.<br>
+				<i class="far fa-smile"></i> Your efforts are definitely appreciated. Thank you, {{session.s_name}}!
+
+				</p>
+
+
+			</div>
+
+			<div>
+					<table class="table table-striped table-bordered table-sm">
+
+						<tr>
+							
+							<th> Title</th>
+							<th> Author</th>
+							<th> Date</th>
+							<th></th>
+							<th></th>
+
+					</tr>
+								
+								<center><a class="btn btn-success btn-block" href="/add_article"> <i class="fas fa-plus"></i> ADD ANSWERS </a></center>
+				
+							
+					{% for article in articles %}
+					<tr>
+					<td> {{article.title}} </td>
+					<td> {{article.author}} </td>
+					<td> {{article.create_date}} </td>
+
+					<form action="edit_article" method="post">
+						<input type="hidden" name="eid" value="{{article.id}}">
+						<td>
+							<button class="btn btn-info" type="submit"><i class="fas fa-user-edit"> </i> EDIT 
+
+							</button>
+						</td>
+					</form>
+					<td>
+					<form action="{{url_for('delete_article', id=article.id)}}" method="post">
+					<input type="submit" name="Delete" value="Delete" class="btn btn-danger">
+
+					</form>
+					</td>
+
+					</tr>
+					{% endfor %}
+					</table>
+			</div>
+								
+
+
+</body>
+		
+			{% if session.logged_in == NULL %}
+
+
+<div class="container text-center"> 
+{% else %}
+		<p class="lead">The questions you have received. <br> </p>
+		<center><a href="/chatting/{{ session.uid }}" class="btn btn-primary btn-lg">TO CHATROOM</a></center>
+		<br>
+	{% endif %}
+
+			<br>	<br>	<br>	<br>
+{% endblock %}
+	

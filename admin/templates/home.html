@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+{% block body %}
+<head>
+<style type="text/css">
+	
+	@media (min-width: 320px) and (max-width: 480px)
+	{
+       .first
+       {
+       	 width: 315px !important;
+       }
+
+	}
+
+  .first
+  {
+  	width:560px;
+  	 height: 500px;
+  }
+    .second
+  {
+  	width:560px;
+  	 height: 500px;
+  }
+    .third
+  {
+  	width:560px;
+  	 height: 600px;
+  }
+
+
+   #vision
+   {
+   	font-size: 18px;
+  	line-height: 30px;
+   }
+    #mision
+   {
+   	font-size: 18px;
+  	line-height: 30px;
+   }
+  #work{
+  	font-size: 18px;
+  	line-height: 30px;
+  }
+
+</style>
+</head>
+
+
+<body class="servicebody">
+
+ <center><img src="https://dcassetcdn.com/design_img/2519833/638366/638366_13501072_2519833_e4268939_image.jpg" style="height: 300px;">
+
+<div class="container">
+	
+
+    <button type="button" class="btn btn-primary btn-sm"><a class=" my-2 my-sm-0 text-white" href="/login">
+          <i class="fas fa-sign-in-alt mr-1" class="btn btn-block"></i>
+          <b>LOGIN AS ADMIN</b>
+         </a></button>
+</div>
+
+</center>
+<br><br>
+
+</body>
+
+{% endblock %}

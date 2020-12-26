@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+<div class="add">
+{% block body %}
+<br><br><br><br>
+<div class="container container-fluid">
+			<button type="button" class="btn btn-success btn-sm btn-block"><a 	class=" mr-sm-2 text-white" href="/upload">
+          		<i class="fas fa-user-plus mr-1"></i>
+          		<b>UPLOAD ANSWER AS A FILE</b>
+       			</a>
+       		</button>
+
+<h1><center>ADD ANSWERS</center></h1>
+{% from "includes/_formhelpers.html" import render_field %}
+<form method="POST"  action="">
+	<div class="form-group">
+		{{ render_field(form.title, class_="form-control") }}
+	</div>
+<div class="form-group">
+		{{ render_field(form.summary, class_="form-control") }}
+	</div>
+	<div class="form-group">
+		{{ render_field(form.body, class_='form-control', id="editor") }}
+	</div>
+<p><input class="btn btn-primary" type="submit"  value="Publish"></p>
+	</form>
+	
+</div>
+	{% endblock %}
+</div>

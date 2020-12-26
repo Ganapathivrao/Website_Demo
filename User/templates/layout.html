@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FlaskApp</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="css/background.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!--This syntax is used to give us the ability to extend the contents of this page. -->
+{% include 'includes/_navbar.html' %}
+<div>
+{% include 'includes/_messages.html' %} 
+{% block body %} {% endblock %}
+</div>
+
+<div>
+<script src="//cdn.ckeditor.com/4.11.2/full/ckeditor.js"></script>
+
+<script type="text/javascript">
+    
+CKEDITOR.replace('editor')
+</script>
+</div>
+
+<!-- footer starts from here -->
+            <footer class="footer pt-2 mb-0 bg-dark text-light rounded-0 px-0">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-justify">
+                            <h5><b>About Us</b></h5>
+                            <ul class="list-group px-1 pb-3 ml-0">
+                                <li class="list-group-item border-0 bg-dark" style="padding:0px 5px;">
+                                    <i class=" fas fa-angle-right text-light"></i>
+                                    <div class="container" style="margin-top: -22px;">
+                                        <a href="/home" class="text-light">About</a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-0 bg-dark" style="padding:0px 5px;">
+                                    <i class=" fas fa-angle-right text-light"></i>
+                                    <div class="container" style="margin-top: -22px;">
+                                        <a href="/team" class="text-light">Our Team</a>
+                                    </div>
+                                </li>
+                                
+
+                                   <li class="list-group-item border-0 bg-dark" style="padding:0px 5px;">
+                                    <i class=" fas fa-angle-right text-light"></i>
+                                    <div class="container" style="margin-top: -22px;">
+                                        <a href="/service" class="text-light">Services</a>
+                                    </div>
+                                </li>
+                              
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-light text-justify">
+                            <h5><b class="text-light">Contacts</b></h5>
+                            <ul class="list-group px-1 pb-3 ml-0">
+                                <li class="list-group-item border-0 bg-dark" style="padding:0px 5px;">
+                                    <i class="fas text-light"></i>
+                                    <div class="container" style="margin-top: -22px;">
+                                        <a class="text-light"><img src="https://img.icons8.com/color/48/000000/address.png" height="30px"> Mysore, Karnataka, India</a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-0 bg-dark" style="padding:0px 5px;">
+                                    <i class=" fas  text-light"></i>
+                                    <div class="container" style="margin-top: -22px;">
+                                        <a class="text-light"><img src="https://img.icons8.com/color/48/000000/phone.png" height="30px">+91 9148045348</a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-0 bg-dark" style="padding:0px 5px;">
+                                    <i class=" fas text-light"></i>
+                                    <div class="container" style="margin-top: -22px;">
+                                        <a class="text-light"><img src="https://img.icons8.com/color/48/000000/email.png" height="30px"> quickhelp@outlook.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-justify">
+                            <h5><b class="text-light">Follow Us</b></h5>
+                            <ul class="list-group px-1 pb-3 mt-0 ml-0">
+                                <li class="list-group-item border-0 bg-dark" style="padding:0px 5px;">
+                                    <i class=" fas  text-light"></i>
+                                    <div class="container" style="margin-top: -22px;">
+                                       <a href="https://www.facebook.com/"> <img src="https://img.icons8.com/color/48/000000/facebook.png" style="height: 30px;"></a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-0 bg-dark" style="padding:0px 5px;">
+                                    <i class=" fas  text-light"></i>
+                                    <div class="container" style="margin-top: -22px;">
+                                        <a href="https://www.instagram.com"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" style="height: 30px;"></a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-0 bg-dark" style="padding:0px 5px;">
+                                    <i class=" fas text-light"></i>
+                                    <div class="container" style="margin-top: -22px;">
+                                       <a href="https://twitter.com"><img src="https://img.icons8.com/color/48/000000/twitter.png" style="height: 30px;"></a>
+                                    </div>
+                                </li>
+                                 <li class="list-group-item border-0 bg-dark" style="padding:0px 5px;">
+                                    <i class=" fas  text-light"></i>
+                                    <div class="container" style="margin-top: -22px;">
+                                       <a href="https://www.linkedin.com/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvStgXFvbZ7Z2p68O1QXIRRrOJMeZtLSrgbOgX33LD4qPRdU4P" style="height: 30px;"></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    
+<!-- ends here. -->   
+</body>
+</html>
